@@ -1,0 +1,34 @@
+Remember that computers must run COMPILED programs! Do not think of the program as the source code. The program is the compiled machine code.
+
+objdump -D filename -M intel -- Shows executable info in intel assembly
+gdb -- C debugger, must compile program with -g option for gdb to work
+
+Hacking will use the Intel assembly flavor - in general, operation <destination>, <source>
+
+
+
+GDB -
+
+list - show source code
+disassemble <function> - show dump of function
+break <function> - add break point at function
+run - begin execution of program
+info register <reg> - display current state of register
+x - examine, takes 
+    /o (octal), 
+    /x (hex), 
+    /u (unsigned int), 
+    /t (binary),
+    /i (instruction),
+    /c (ASCII character),
+    /s (string)
+
+e.g. x/x $rip will display the current contents of the index pointer as a hex number
+
+nexti - next instruction
+
+
+
+-- One word is four bytes - 32 bits!
+Default size of memory units is one word
+Word = DWORD (double word)

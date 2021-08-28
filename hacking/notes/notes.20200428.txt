@@ -1,0 +1,28 @@
+Data types
+
+Strings in C are represented as an array of chars
+
+e.g.
+
+char mystring[10]  // a ten character string
+
+You can then add each element to the string one at a time
+
+Alternatively, you can use the strcpy function, found in string.h
+
+char mystring[10];
+strcpy(mystring, "Hello world!\n");
+
+
+Pointers
+--------
+
+Pointers contain addresses of other data and are denoted with *
+
+e.g.
+
+int *myptr = &myint; // put the address of myint into myptr
+
+printf(*myptr); // dereference myptr (prints the value at the address)
+
+Arrays are passed as pointers.
